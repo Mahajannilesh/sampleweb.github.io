@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+   <head>
+	  <title>Seatime Calculator</title>
+	  <link rel="stylesheet" type="text/css" href="css/style.css">
+	  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+	  
+   </head>
+   <body>
+	  <header>
+				
+	  <nav>
+		 <div class="main">
+			<div class="logo">
+			   <img src="logo.png">
+			</div>
+			<ul class="socialIcons">
+				<li class="facebook"><a href=""><i class="fa fa-fw fa-facebook"></i>Facebook</a></li>
+				<li class="twitter"><a href=""><i class="fa fa-fw fa-twitter"></i>Twitter</a></li>
+				<li class="instagram"><a href=""><i class="fa fa-fw fa-instagram"></i>Instagram</a></li>
+				<li class="pinterest"><a href=""><i class="fa fa-fw fa-pinterest-p"></i>Pinterest</a></li>
+				<li class="steam"><a href=""><i class="fa fa-fw fa-steam"></i>Steam</a></li>
+			</ul>
+			<ul>
+			   <li><a href="./index.html" >Home</a></li>
+			   <li><a href="./tou.html" >Terms of Use</a></li>
+			   <li><a href="./privacy.html">Privacy Policy</a></li>
+			   <li><a href="./disclaim.html">Disclaimer</a></li>
+			</ul>
+		 </div>
+		</nav>
+	  <main>
+		 <section>
+			<!--div class="title">
+			   <h1>
+				  <center>Seatime Calculator</center>
+			   </h1>
+			</div-->
+			<div class="para">
+			   <p> This page has been created to allow seafarers to quickly calculate their seatime for applications for Certificate of Competency. We utilise the system of calculation used by the UK Maritime and Coastguard Agency.</p>
+			   <p> Enter the ship name, join date and leave date and click the 'Calculate' button to calulate the length of the trip. The result will be added to a grid and subsequent trips can be added by entering the relevant details and clicking the 'Calculate' button for each trip.</p>
+			</div>
+			<div class="login">
+			   <form name= "validation" on submit= "return validate()">
+				  <table>
+					 <tr>
+						<td><b> Vessel Name </b>: </td>
+						<td><input id="vesselName" type= "text" placeholder= "Enter Vessel Name" size="50" width= "56" > </td>
+					 </tr>
+					 <tr>
+						<td><b> Date Sign-on </b>:</td>
+						<td><input id='dateOfJoining' type= "Date" placeholder= "dd/mm/yyyy" size="50" width= "56" > </td>
+					 </tr>
+					 <tr>
+						<td><b> Date Sign-off </b>: </td>
+						<td><input id='dateLeftVessel' type= "Date" placeholder= "dd/mm/yyyy" size="50" > </td>
+					 </tr>
+					 <tr id="btna">
+						<td><input type= "button" value= "Calculate"  onclick="CalculateDiff()"> </td>
+					 </tr>
+					 <tr id="res">
+						<td><input type="reset"  value="Reset" > </td>
+					</tr>
+					 <tr style="display: none;">
+						<div id="resultTable" >
+						 	<table border="4">
+								   <thead>
+									  <tr>
+										 <th> Ship Name </th>
+										 <th> Join Date </th>
+										 <th> Leave Date </th>
+										 <th> Years </th>
+										 <th> Month </th>
+										 <th> Day </th>
+									  </tr>
+								   </thead>
+								   <tbody id="differenceCalculated">
+										<!-- <div id='differenceCalculated'></div>--> 
+								   </tbody>
+								   <tr id="TotalSum"></tr>
+							</table>
+						</div>
+					 </tr>
+				  </table>
+
+			   </form>
+			</div>
+		 </section>
+	  </main>
+   </body>
+   <script src="JS/Custom.js"></script>
+   <script src="JS/table.js"></script>
+</html>
