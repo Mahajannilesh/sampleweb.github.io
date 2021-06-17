@@ -6,7 +6,7 @@
 }
 
 header{
-	background-image:linear-gradient(rgba(100,0,0,0.2),rgba(100,0,0,0.2)), url(background.jpg);
+	background-image:linear-gradient(rgba(100,0,0,0.2),rgba(100,0,0,0.2)), url(../background.jpg);
 	height: 100vh;
 	background-repeat:no-repeat;
 	background-size: auto;
